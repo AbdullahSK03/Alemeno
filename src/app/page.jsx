@@ -79,12 +79,12 @@ const CourseList = [
 const page = () => {
   return (
     <div className='m-4 flex flex-col items-center justify-center'>
-      <h1 className="text-center text-6xl font-Heading font-extrabold">
+      <h1 className="tracking-in-expand-fwd text-center text-6xl font-Heading font-extrabold">
         Welcome!
       </h1>
       {
-        CourseList.map((course) => (
-        <div key={course.CourseID} className="m-10 mx-4 max-w-screen-lg overflow-hidden rounded-xl border shadow-lg md:pl-8">
+        CourseList.map((course, index) => (
+        <div key={course.CourseID} className={`slide-in-left m-10 mx-4 max-w-screen-lg overflow-hidden rounded-xl border shadow-lg md:pl-8`} style={{animationDelay: `${index * 0.2}s`}}>
           <div className="flex flex-col overflow-hidden bg-white sm:flex-row md:h-80">
           <div className="flex w-full flex-col p-4 sm:w-1/2 sm:p-8 lg:w-3/5">
             <h2 className="text-xl font-bold text-gray-900 md:text-2xl lg:text-4xl">{course.CourseName}</h2>
@@ -104,4 +104,4 @@ const page = () => {
   )
 }
 
-export default page
+export default page;
