@@ -14,7 +14,7 @@ const HeaderNav = () => {
         >
           Login
         </Link>
-        <Link className="text-black p-2 hover:bg-gray-200" href="Profile">
+        <Link className="text-black p-2 hover:bg-gray-200" href="/Profile">
             <span>
               <h2>Profile</h2>
             </span>
