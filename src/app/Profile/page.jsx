@@ -1,15 +1,8 @@
-import dynamic from "next/dynamic";
+"use client";
 import Image from "next/image";
-
-const NoSSR = dynamic(() => import("./page"), { ssr: false });
-
 const page = () => {
-  // Define your tabs here
-  const tabs = ["Bio", "Courses", "Projects"];
-
   return (
     <div className="p-10 text-center flex flex-col justify-center items-center">
-      <NoSSR />
       <div className="">
         <Image
           src="/pfp.webp"
@@ -29,14 +22,16 @@ const page = () => {
       <table>
         <tbody>
           <tr>
-            {tabs.map((tab, index) => (
-              <td key={index} className="p-4">{tab}</td>
-            ))}
+            <td className="p-4">Bio</td>
+            <td className="p-4">Courses</td>
+            <td className="p-4">Projects</td>
           </tr>
         </tbody>
         <tbody>
           <tr>
-            {/* Your content here */}
+            {
+
+            }
           </tr>
         </tbody>
       </table>
