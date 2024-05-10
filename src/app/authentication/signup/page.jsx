@@ -1,8 +1,6 @@
+import React from 'react'
+
 const page = () => {
-  
-  const clickHandler = () => {
-    console.log("hello")
-  }
   return (
     <div className="p-56">
       <div className="flex w-96 flex-col space-y-5 rounded-lg border py-10 px-5 shadow-xl mx-auto">
@@ -14,7 +12,7 @@ const page = () => {
         <div>
           <div className="relative mt-2 w-full">
             <input
-              type="text"
+              type="email"
               id="email"
               className="border-1 peer block w-full appearance-none rounded-lg border border-gray-300 bg-transparent px-2.5 pb-2.5 pt-4 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0"
               placeholder=" "
@@ -28,7 +26,6 @@ const page = () => {
             </label>
           </div>
         </div>
-
         <div>
           <div className="relative mt-2 w-full">
             <input
@@ -42,19 +39,50 @@ const page = () => {
               className="absolute top-2 left-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-white px-2 text-sm text-gray-500 duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-blue-600"
             >
               {" "}
+              Contact Number
+            </label>
+          </div>
+        </div>
+        <div>
+          <div className="relative mt-2 w-full">
+            <input
+              type="password"
+              id="password"
+              className="border-1 peer block w-full appearance-none rounded-lg border border-gray-300 bg-transparent px-2.5 pb-2.5 pt-4 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0"
+              placeholder=" "
+            />
+            <label
+              htmlFor="password"
+              className="absolute top-2 left-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-white px-2 text-sm text-gray-500 duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-blue-600"
+            >
+              {" "}
               Enter Your Password
             </label>
           </div>
         </div>
-        <button className="rounded-lg bg-black py-3 font-bold text-white">
-          Login
-        </button>
-        <hr className="" />
+        <div>
+          <div className="relative mt-2 w-full">
+            <input
+              type="password"
+              id="password"
+              className="border-1 peer block w-full appearance-none rounded-lg border border-gray-300 bg-transparent px-2.5 pb-2.5 pt-4 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0"
+              placeholder=" "
+            />
+            <label
+              htmlFor="password"
+              className="absolute top-2 left-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-white px-2 text-sm text-gray-500 duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-blue-600"
+            >
+              {" "}
+              Re-Enter Your Password
+            </label>
+          </div>
+        </div>
         <a href="/authentication/signup" className="text-center rounded-lg bg-white py-3 font-bold text-black border border-black hover:bg-black hover:text-white">
           Sign Up
         </a>
       </div>
     </div>
-  );
-};
-export default page;
+  )
+}
+
+export default page

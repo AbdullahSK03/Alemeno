@@ -1,3 +1,5 @@
+'use client'
+
 import Image from "next/image"
 
 const CourseList = [
@@ -77,21 +79,21 @@ const CourseList = [
 const page = () => {
   return (
     <div className='m-4 flex flex-col items-center justify-center'>
-      <h1 className="text-center text-8xl font-Heading font-extrabold">
+      <h1 className="text-center text-6xl font-Heading font-extrabold">
         Welcome!
       </h1>
       {
         CourseList.map((course) => (
-        <div key={course.CourseID} class="m-10 mx-4 max-w-screen-lg overflow-hidden rounded-xl border shadow-lg md:pl-8">
-          <div class="flex flex-col overflow-hidden bg-white sm:flex-row md:h-80">
-          <div class="flex w-full flex-col p-4 sm:w-1/2 sm:p-8 lg:w-3/5">
-            <h2 class="text-xl font-bold text-gray-900 md:text-2xl lg:text-4xl">{course.CourseName}</h2>
-            <p class="mt-2 text-lg">By {course.Instructor}</p>
-            <p class="mt-4 mb-8 max-w-md text-gray-500">{course.Description}</p>
-            <button class="rounded-xl border bg-black px-4 py-2 font-semibold text-white hover:bg-white hover:text-black hover:border-black w-48">Enroll</button>
+        <div key={course.CourseID} className="m-10 mx-4 max-w-screen-lg overflow-hidden rounded-xl border shadow-lg md:pl-8">
+          <div className="flex flex-col overflow-hidden bg-white sm:flex-row md:h-80">
+          <div className="flex w-full flex-col p-4 sm:w-1/2 sm:p-8 lg:w-3/5">
+            <h2 className="text-xl font-bold text-gray-900 md:text-2xl lg:text-4xl">{course.CourseName}</h2>
+            <p className="mt-2 text-lg">By {course.Instructor}</p>
+            <p className="mt-4 mb-8 max-w-md text-gray-500">{course.Description}</p>
+            <button className="rounded-xl border bg-black px-4 py-2 font-semibold text-white hover:bg-white hover:text-black hover:border-black w-48">Enroll</button>
           </div>
-          <div class="order-first ml-auto h-48 w-full bg-gray-700 sm:order-none sm:h-auto sm:w-1/2 lg:w-2/5">
-            <Image width={500} height={500} class="h-full w-full object-cover" src="" loading="lazy" />
+          <div className="order-first ml-auto h-48 w-full bg-gray-700 sm:order-none sm:h-auto sm:w-1/2 lg:w-2/5">
+            <Image width={500} height={500} className="h-full w-full object-cover" src={`/${course.Image}`} loading="lazy" alt="course image" />
           </div>
         </div>
       </div>
