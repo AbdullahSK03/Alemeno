@@ -5,9 +5,6 @@
 @tailwind components;
 @tailwind utilities;
 
-#Course-card{
-  height: max-content;
-}
 
 .tracking-in-expand-fwd {
 	-webkit-animation: tracking-in-expand-fwd 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
