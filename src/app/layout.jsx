@@ -11,7 +11,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`font-Body`}>
         <HeaderNav/>
-        {children}
+        <div className="mt-10">
+          {children}
+        </div>
       </body>
     </html>
   );

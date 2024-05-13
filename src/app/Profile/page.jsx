@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import Image from "next/image";
 const page = () => {
   return (
@@ -22,16 +23,9 @@ const page = () => {
       <table>
         <tbody>
           <tr>
-            <td className="p-4">Bio</td>
-            <td className="p-4">Courses</td>
-            <td className="p-4">Projects</td>
-          </tr>
-        </tbody>
-        <tbody>
-          <tr>
-            {
-
-            }
+            <td className="p-4"><Link href="/Profile/Bio">Bio</Link></td>
+            <td className="p-4"><Link href="/Profile/Courses">Courses</Link></td>
+            <td className="p-4"><Link href="/Profile/Projects">Projects</Link></td>
           </tr>
         </tbody>
       </table>

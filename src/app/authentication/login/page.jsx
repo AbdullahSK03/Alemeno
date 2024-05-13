@@ -1,20 +1,23 @@
+"use client"
+
+import Link from "next/link";
+import React from "react";
+
 const page = () => {
-  
-  const clickHandler = () => {
-    console.log("hello")
-  }
   return (
-    <div className="p-56">
-      <div className="flex w-96 flex-col space-y-5 rounded-lg border py-10 px-5 shadow-xl mx-auto">
+    <div className="items-center justify-center my-20">
+      <div className="text-left flex w-96 flex-col space-y-5 rounded-lg border py-10 px-5 shadow-xl mx-auto">
         <div className="mx-auto mb-2 space-y-3">
-          <h1 className=" text-3xl font-bold text-gray-700 font-Heading">Log into Alemeno</h1>
-          <p className="text-gray-500">Login to access your account</p>
+          <h1 className=" text-3xl font-bold text-gray-700 font-Heading">
+            Login
+          </h1>
+          <p className="text-gray-500">Login to access Alemeno</p>
         </div>
 
         <div>
           <div className="relative mt-2 w-full">
             <input
-              type="text"
+              type="email"
               id="email"
               className="border-1 peer block w-full appearance-none rounded-lg border border-gray-300 bg-transparent px-2.5 pb-2.5 pt-4 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0"
               placeholder=" "
@@ -28,11 +31,10 @@ const page = () => {
             </label>
           </div>
         </div>
-
         <div>
           <div className="relative mt-2 w-full">
             <input
-              type="text"
+              type="password"
               id="password"
               className="border-1 peer block w-full appearance-none rounded-lg border border-gray-300 bg-transparent px-2.5 pb-2.5 pt-4 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0"
               placeholder=" "
@@ -46,15 +48,23 @@ const page = () => {
             </label>
           </div>
         </div>
-        <button className="rounded-lg bg-black py-3 font-bold text-white">
+        <button
+          formMethod="post"
+          onClick={() => {console.log("Feature Not Available")}}
+          className="text-center rounded-lg bg-white py-3 font-bold text-black border border-black hover:bg-black hover:text-white"
+        >
           Login
         </button>
-        <hr className="" />
-        <a href="/authentication/signup" className="text-center rounded-lg bg-white py-3 font-bold text-black border border-black hover:bg-black hover:text-white">
-          Sign Up
-        </a>
+        <hr className="my-5 shadow-2xl"/>
+        <Link
+          href="/authentication/signup"
+          className="text-center rounded-lg hover:bg-white py-3 font-bold hover:text-black border border-black bg-black text-white"
+        >
+          Signup
+        </Link>
       </div>
     </div>
   );
 };
+
 export default page;
