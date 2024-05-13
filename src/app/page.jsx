@@ -103,5 +103,5 @@ const page = () => {
     </div>
   )
 }
-
+export {CourseList};
 export default page;
