@@ -2,7 +2,7 @@
 import { usePathname } from "next/navigation";
 import { CourseList } from "@/app/page";
 import Image from "next/image";
-const page = () => {
+const Page = () => {
   const pathname = usePathname();
   const courseId = pathname.split("/")[2]; // assuming the path is /course/[courseId]
 
@@ -53,4 +53,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
